@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<section>
+    <div>
+        <h1>Fala pra gente, onde alagou?</h1>
+        {% if formulario %}
+        <form method="POST">
+            {% csrf_token %}
+            {{formulario}}
+            <button>Enviar</button>
+        </form>
+        {% endif %}
+        {% if msg %}
+        <h2>{{msg}}</h2>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock %}
