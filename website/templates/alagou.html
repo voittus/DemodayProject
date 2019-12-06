@@ -1,16 +1,16 @@
 {% extends 'layout.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 
 <section>
-    <div>
-        <h1>Fala pra gente, onde alagou?</h1>
+    <div class="formulario">
+        <h3>Fala pra gente, onde alagou?</h3>
         {% if formulario %}
         <form method="POST">
             {% csrf_token %}
-            {{formulario}}
-            <button>Enviar</button>
+            {{formulario|crispy}}
+            <button>ENVIAR</button>
         </form>
         {% endif %}
         {% if msg %}
