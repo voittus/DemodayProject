@@ -10,23 +10,38 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'styleresponsive.css' %}">
     <script defer src="{% static 'script.js' %}"></script>
     <title>Alaga Maps</title>
 </head>
 
 <body>
-    <input type="checkbox" id="bt_menu">
-    <label for="bt_menu">&#9776;</label>
-    <nav class="menu">
-        <a href="http://localhost:8000/alagou/">alagou</a>
-        <a href="">mapa</a>
-        <a href="http://localhost:8000/" id="inicio">inicio</a>
-        <a href="">previsao</a>
-        <a href="http://localhost:8000/cadastro/">cadastro/login</a>
-     
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-secondary-color-dark" id="nav-collapse">
+        <a class="navbar-brand" href="#">AlagaMaps</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8000/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/alagou/">Alagou</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/cadastro/">Cadastro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/locaisalagados/">Pontos de Alagamento</a>
+            </li>
+        </ul>
     </nav>
+
     {% block content %}
 
     {% endblock %}
