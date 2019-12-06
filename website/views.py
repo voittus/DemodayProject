@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from website.forms import CadastroForm
 from website.forms import AlagouForm
 from website.models import *
+from django.http import HttpResponse
 # Create your views here.
 
 def layout(request):
@@ -35,3 +36,7 @@ def cadastro(request):
         'formulario':form
     }
     return render(request, 'cadastro.html', context)
+
+def local(request):
+    locals = Alagou.objects.all().order_by('bairro')
+    return render(request, 'locaisalagados.html', {'locals': locals})
