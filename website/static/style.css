@@ -8,7 +8,7 @@ nav
 {
     display: flex;
     height: 45px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 nav a
@@ -49,6 +49,7 @@ div
     -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
 	-moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
     box-shadow: 15px 20px 15px rgb(86, 15, 107); 
+    border-radius: 10%;
 }
 .nav{
     background-color: transparent;
