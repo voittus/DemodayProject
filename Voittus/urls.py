@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('alagou/', views.alagou),
-    path('cadastro/', views.cadastro)
+    path('cadastro/', views.cadastro),
+    path('locaisalagados/', views.local)
 ]
