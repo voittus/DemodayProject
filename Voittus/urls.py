@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.home),
     path('alagou/', views.alagou),
     path('cadastro/', views.cadastro),
+    path('login/', views.login_user),
     path('locaisalagados/', views.local)
 ]
