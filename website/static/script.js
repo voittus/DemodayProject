@@ -1,7 +1,26 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiaWl3YWx0ZXIiLCJhIjoiY2szdW94ZWJ6MGZyNDNqcHdkaDkyZGdwOCJ9.IZ6e5AMNOVvdf-zbNrKdug';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-});
+function initMap() {
+    // The location of Uluru
+    var sp = { lat: -23.5489, lng: -46.6388 };
+    // The map, centered at sp
+    var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 11, center: sp });
+    // The marker, positioned at sp
+    var markers = new google.maps.Marker(
+        {
+            position: new google.maps.LatLng(-23.5356, -46.5272),
+            map: map
+        },
+
+    );
+    var markers = new google.maps.Marker({
+        position: new google.maps.LatLng(-23.5271, -46.6593),
+        map: map
+    })
+}
+initMap();
+
+
+
 
 var nav = responsiveNav("#nav-collapse");
+
