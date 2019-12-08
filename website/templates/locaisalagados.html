@@ -3,22 +3,17 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<section>
-        <div class="row">
-                {% for local in locals %}
-            <div class="col">
-              <div class="card" style="width: 18rem;">
-                  <h5 class="card-title">{{ local.bairro}}</h5>
-                  <h5 class="card-title">{{ local.situacao}}</h5>
-                  <h5 class="card-title">{{ local.trafego}}</h5>
-                </div>
-              </div>
-                </div>
-                {% endfor %}
-        </div>
-    <div
-        id='map' style='width: 700px; height: 500px;'>
-    </div >
+<section class="alagados">
+  <div class="row">
+    {% for local in locals %}
+    <div class="card" style="width: 18rem; margin: 5px;">
+      <ul>
+        <h5 class="card-title">{{ local.bairro }}</h5>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <div id="map"></div>
 </section>
 
 {% endblock %}
