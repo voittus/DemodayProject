@@ -2,23 +2,19 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-
 <section>
-
-    <div class="purplecard" id="formu">
-        <h3>Entre na sua conta alagaMaps</h3>
-        {% if formulario %}
-        <form method="POST">
-            {% csrf_token %}
-            {{formulario|crispy}}
-            <button>Entrar</button>
-        </form>
-        {% endif %}
-        {% if msg %}
-        <h2>{{msg}}</h2>
-        {% endif %}
-    </div>
-
-</section>
-
+        <div class="purplecard" id="formulario">
+            <h3>Entre</h3>
+            {% if formulario %}
+            <form method="POST">
+                {% csrf_token %}
+                {{formulario|crispy}}
+                <button>Entrar</button>
+            </form>
+            {% endif %}
+            {% if msg %}
+            <h2>{{msg}}</h2>
+            {% endif %}
+        </div>
+    </section>
 {% endblock %}
