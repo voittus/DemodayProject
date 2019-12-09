@@ -1,29 +1,13 @@
 body
 {
-    background-color: #8524a3;
+    background-image: url(./images/segundo.jpg);
     margin: 0;
 }
-
-
-label[for="bt_menu"]
+nav
 {
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    display: none;
-    font-size: 30px;
-    height: 50px;
-    width: 50px;
-    padding: 5px;
-    text-align: center;
+    background: #64137c;
+    opacity: 0.8;
 }
-
-#bt_menu
-{
-    display: none;
-}
-
-
 section
 {
     align-items: center;
@@ -42,19 +26,36 @@ section
     padding: 0.5%;
     width: 45%;
     -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
-	-moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
+    -moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
     box-shadow: 15px 20px 15px rgb(86, 15, 107); 
     border-radius: 30px;
 }
+#formulario
+{
+    margin: 100px;
+}
+
+.row
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #64137c;
+    border-radius: 30px;
+    -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
+    -moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
+    box-shadow: 15px 20px 15px rgb(86, 15, 107); 
+    padding: 5%;
+}
+
+
+
 #map{
     margin: 60px;
     border-radius: 10px;
-    height: 420px;
-    width: 50%;
-}
-.nav{
-    background-color: transparent;
-    box-shadow: none; 
+    height: 400px;
+    width: 70%;
 }
 
 h3
@@ -64,12 +65,39 @@ h3
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
-
+h5{
+    color: #fffefe;
+    text-align: center;
+}
+.card {
+    -webkit-box-shadow: 3px 3px 5px white;
+    -moz-box-shadow: 5px 5px 5px white;
+    box-shadow: white;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-bottom: 10%;
+}
 iframe
 {
     padding: 3% 30% 0 34%;
 }
 
+label{
+    display: none;
+}
+.controls{
+    margin: 0%;
+    padding: 0%;
+}
 p
 {
     font-family: 'Roboto', sans-serif;
@@ -80,15 +108,12 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* padding: 3% 5% 0 5%;
-    margin: 20px; */
     }
 
 .form-group{
     background-color: transparent;
     box-shadow: none;
-    padding: 0%;
+    padding: 0px;
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -102,29 +127,37 @@ form{
 }
 .controls{
     padding: 0%;
-    margin: 20px;
+    margin: 0%;
     width: 100%;
 }
-
+.help-block{
+    display: none;
+}
 button{
     margin-top: 10px;
-    margin-right: 30%;
-    margin-left: 30%;
-    color: black;
+    margin-bottom: 15px;
+    color: #64137c;
+    font-weight: bold;
     -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
 	-moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
     box-shadow: 15px 20px 15px rgb(86, 15, 107);
     text-shadow: 15px 20px 15px rgb(86, 15, 107);
-    background-color: transparent;
-    border-radius: 10%;
-    padding: 10px;
-    border-color: violet;
+    background-color: white;
+    border-radius: 30px;
+    padding: 1% 10% 1% 11%;
 }
 footer
 {
     display: flex;
     justify-content: space-around;
     height: 40px;
+    background-color: black;
+    opacity: 0.5;
+    /* position:absolute;
+    bottom: 0;
+    left: 0; */
+    width:100%;
+    background-color: #64137c;
 }
 footer a{
     color: white;
