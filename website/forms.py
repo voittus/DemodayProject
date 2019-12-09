@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 class CadastroForm(forms.ModelForm):
     User._meta.get_field('email').blank = False
     User._meta.get_field('password').blank = False
+    password = forms.CharField(max_length=16, widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Senha'}))
     class Meta:
         model = User
         fields = [
@@ -16,8 +17,8 @@ class CadastroForm(forms.ModelForm):
             'password',
         ]
         widgets = {
-            'username':forms.TextInput(attrs={'class': 'form-control', 'maxlength':140 }),
-            'password':forms.PasswordInput(attrs={'class': 'form-control', 'maxlength':255 })
+            'username':forms.TextInput(attrs={'class': 'form-control', 'maxlength':140, 'placeholder': 'Username' }),
+            'email':forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'})
         }
     def save(self, commit=True):
         user = super(CadastroForm, self).save(commit = False)
@@ -25,7 +26,6 @@ class CadastroForm(forms.ModelForm):
         if commit:
             user.save()
         return user
-
 
 class AlagouForm(forms.ModelForm):
     class Meta:
@@ -35,4 +35,12 @@ class AlagouForm(forms.ModelForm):
             'bairro',
             'trafego',
         ]
+        widgets = {
+            'rua':forms.TextInput(attrs={'class': 'form-control', 'maxlength':140, 'placeholder': 'Endereço alagado' }),
+            'bairro':forms.TextInput(attrs={'class': 'form-control', 'maxlength':140, 'placeholder': 'Bairro' }),
+            'trafego':forms.TextInput(attrs={'class': 'form-control', 'maxlength':140, 'placeholder': 'transito' })
+        }
 
+class LoginForm(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField(max_length=16, widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Senha'}))
