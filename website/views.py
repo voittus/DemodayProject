@@ -49,8 +49,9 @@ def cadastro(request):
 
 def local(request):
     locals2 = Alagou.objects.values('rua').annotate(dCount=Count('rua'))
-    if locals2.annotate(dCount=Count('rua')) != None:
-        return render(request, 'locaisalagados.html', {'locals': locals})
+    for local in locals2:
+        if local.get('dCount') > 5:
+            return render(request, 'locaisalagados.html', {'ruaAlagada':local})
 
 
 def login_user(request):

@@ -1,12 +1,12 @@
 body
 {
-    background-image: url(./images/segundo.jpg);
+    background-image: url(./images/teste3.jpeg);
     margin: 0;
 }
 nav
 {
-    background: #64137c;
-    opacity: 0.8;
+    background: rgb(0, 110, 201);
+    opacity: 0.9;
 }
 section
 {
@@ -20,15 +20,17 @@ section
 
 .purplecard
 {
-    background-color: #64137c;
+    background-color: rgb(0, 110, 201);
     height: 100%;
     margin: 50px;
     padding: 0.5%;
     width: 45%;
-    -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
-    -moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
-    box-shadow: 15px 20px 15px rgb(86, 15, 107); 
+    -webkit-box-shadow: 5px 5px 8px black;
+    -moz-box-shadow: 8px 8px 10px black;
+    box-shadow: 8px 8px 8px black; 
+    opacity: 0.9;
     border-radius: 30px;
+
 }
 #formulario
 {
@@ -136,12 +138,8 @@ form{
 button{
     margin-top: 10px;
     margin-bottom: 15px;
-    color: #64137c;
+    color: rgb(0, 110, 201);;
     font-weight: bold;
-    -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
-	-moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
-    box-shadow: 15px 20px 15px rgb(86, 15, 107);
-    text-shadow: 15px 20px 15px rgb(86, 15, 107);
     background-color: white;
     border-radius: 30px;
     padding: 1% 10% 1% 11%;
