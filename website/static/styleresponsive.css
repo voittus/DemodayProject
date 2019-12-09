@@ -7,44 +7,13 @@
 
     nav
     {
+        display: none;
         align-items: center;
         width: 100%;
         height: 20%;
         float: none;
 
     }
-
-    nav a 
-    {
-        background-color: #64137c;
-        width: 100%;
-        padding-left: 35%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 18pt;
-        padding: 10px 50px 5px 50px;
-        text-decoration: none;
-    }
-    
-    nav a:hover{
-        background-color: #64137c;
-        text-decoration: none;
-        text-transform: none;
-        display:block;
-    }
-
-    .navbar-toggler{
-        margin-left: 0;
-        flex-direction: column;
-        position: absolute;
-        margin-top: 11%;
-    }
-
-    .menu
-    {
-        margin-left: -300%;
-        transition: 1;
-    }
-
     section
     {
         align-items: center;
@@ -53,15 +22,25 @@
         flex-direction: column;
         width: 100%;
     }
-
-    div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 85%;
-        height: 100%;
+    form
+    {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0 20% 0 20%;
     }
+.purplecard {
+    background-color: #64137c;
+    height: 100%;
+    /* margin: 50px; */
+    /* padding: 0 50% 0 40%; */
+    width: 95%;
+    -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
+    -moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
+    box-shadow: 15px 20px 15px rgb(86, 15, 107);
+    border-radius: 30px;
+    }
+
     footer
     {
     justify-content: space-around;
