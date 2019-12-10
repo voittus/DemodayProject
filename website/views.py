@@ -49,9 +49,11 @@ def cadastro(request):
 
 def local(request):
     locals2 = Alagou.objects.values('rua').annotate(dCount=Count('rua'))
+    lugaresCerto = []
     for local in locals2:
-        if local.get('dCount') > 5:
-            return render(request, 'locaisalagados.html', {'ruaAlagada':local})
+        if local.get('dCount') >= 5:
+            lugaresCerto.append(local)
+    return render(request, 'locaisalagados.html', {'lugaresCerto': lugaresCerto})
 
 
 def login_user(request):
@@ -60,7 +62,6 @@ def login_user(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            
             user = authenticate(
                 username=request.POST['username'], password=request.POST['password'])
             if user is not None:

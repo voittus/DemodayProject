@@ -42,5 +42,5 @@ class AlagouForm(forms.ModelForm):
         }
 
 class LoginForm(forms.Form):
-    username = forms.CharField()
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'UserName'}))
     password = forms.CharField(max_length=16, widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Senha'}))
