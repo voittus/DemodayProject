@@ -3,13 +3,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<section >
+<section class="locaisAlagados" >
   <div class="row">
-    <h5>Locais onde usuários informaram situação de alagamento</h5>
-    {% for local in locals %}
+    <h5 id="alagous">Locais alagados</h5>
+    {% for lugar in lugaresCerto %}
     <div class="card" style="width: 18rem; margin: 5px;">
       <ul>
-        <h5 class="card-title">{{ local.bairro }}</h5>
+        <h5 class="card-title">{{lugar.rua}}</h5>
       </ul>
     </div>
     {% endfor %}

@@ -15,9 +15,9 @@ section
     justify-content: space-around;
     flex-direction: row;
     padding: 0.5%;
-    margin-top: 20px;
-}
+    margin-top: 10%;
 
+}
 .purplecard
 {
     background-color: rgb(0, 110, 201);
@@ -43,12 +43,13 @@ section
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #64137c;
+    background-color: rgb(0, 110, 201);
     border-radius: 30px;
-    -webkit-box-shadow: 8px 8px 15px rgb(86, 15, 107);
-    -moz-box-shadow: 8px 8px 20px rgb(86, 15, 107);
-    box-shadow: 15px 20px 15px rgb(86, 15, 107); 
+    -webkit-box-shadow: 5px 5px 8px black;
+    -moz-box-shadow: 8px 8px 10px black;
+    box-shadow: 8px 8px 8px black; 
     padding: 5%;
+    margin-left: 2%;
 }
 
 
@@ -68,8 +69,12 @@ h3
     text-align: center;
 }
 h5{
-    color: #fffefe;
+    color: black;
     text-align: center;
+
+}
+#alagous{
+    margin-bottom: 10%;
 }
 .card {
     -webkit-box-shadow: 3px 3px 5px white;
@@ -144,6 +149,11 @@ button{
     border-radius: 30px;
     padding: 1% 10% 1% 11%;
 }
+.notUser
+{
+    padding: 20px;
+}
+
 footer
 {
     display: flex;
@@ -155,14 +165,14 @@ footer
     bottom: 0;
     left: 0; */
     width:100%;
-    background-color: #64137c;
+    background-color:rgb(0, 110, 201);
 }
-footer a{
+a{
     color: white;
     text-decoration: none;
     text-transform: none;
 }
-footer a:hover{
+a:hover{
     color: white;
     text-decoration: none;
     text-transform: none;

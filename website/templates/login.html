@@ -10,11 +10,13 @@
                 {% csrf_token %}
                 {{formulario|crispy}}
                 <button>Entrar</button>
+                <a class="notUser" href="/cadastro/">Não tenho cadastro</a>
             </form>
             {% endif %}
             {% if msg %}
             <h2>{{msg}}</h2>
             {% endif %}
+            
         </div>
     </section>
 {% endblock %}
