@@ -3,11 +3,40 @@ body
     background-image: url(./images/teste3.jpeg);
     margin: 0;
 }
-nav
+
+.topnav 
 {
     background: rgb(0, 110, 201);
     opacity: 0.9;
+    overflow: hidden;
 }
+  
+.topnav a 
+{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover 
+{
+    background-color: rgb(252, 247, 247);
+}
+  
+.topnav a.active 
+{
+    background-color: rgb(246, 252, 246);
+}
+  
+.topnav .icon 
+{
+    display: none;
+}
+
 section
 {
     align-items: center;
