@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'styleresponsive.css' %}">
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfjgoNPFwiXpeFC6ZwNIB7vcbH49mJdnM&callback=initMap">
-    </script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfjgoNPFwiXpeFC6ZwNIB7vcbH49mJdnM&callback=initMap">
+        </script>
     <script defer src="{% static 'script.js' %}"></script>
     <title>Alaga Maps</title>
 </head>
@@ -26,18 +26,19 @@
         <a class="nav-link" href="/login/">Login/Cadastro</a>
         <a class="nav-link" href="/locaisalagados/">Pontos de Alagamento</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+            <img class="icone" src="../static/images/iconalagamaps.png" alt="">
         </a>
-      </div>
+    </div>
+
     {% block content %}
 
     {% endblock %}
 
-    <footer>
+    <!-- <footer>
         <a href="">Contate-nos</a>
         <a href="">Tutorial</a>
         <a href="">alguma coisa, talvez</a>
-    </footer>
+    </footer> -->
 
 </body>
 

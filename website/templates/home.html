@@ -1,71 +1,38 @@
 {% extends 'layout.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-<section class="home">
+
+<section>
     <div class="purplecard">
         <h3></h3>
 
-        <p>Lorem ipsum dolor Earum doloribus a inventore quidem culpa
-            blanditiis. voluptatum placeat temporibus deleniti nostrum
-            eum quia quod fuga!Lorem ipsum dolor,Earum doloribus a inventore quidem culpa
-            blanditiis.voluptatum placeat temporibus deleniti nostrum
-            eum quia quod fuga!
+        <p>AlagaMaps é um site que informa de acordo com usuários, os pontos de alagamento na cidade!
+            Calculamos com base na quantidade de informações de locais alagados e informamos pra você!
         </p>
     </div>
 
-    <div class="purplecard">
-        <h3>O que fazemos? Por que fazemos?</h3>
-        <p>
-            AlagaMaps é um site/app que informa de acordo com usuários, os pontos de alagamento na cidade! 
-            Queremos que tenha uma forma mais segura e rápida de chegar ao seu destino. Por isso, AlagaMaps irá
-            mostrar pontos onde há alagamentos. E assim, você poderá decidir por caminhos alternativos, sem dor de cabeça!
-        </p>
+    <div class="purplecard" id="formulario" style="display: flex; flex-direction: column; justify-content: center;">
+        <h3>Pesquise por sua rua ou avenida:</h3>
+        <form method="POST" class="form-pesquisa">
+            {% csrf_token %}
+            {{formulario|crispy}}
+            <button>Pesquisar</button>
+        </form>
+        <div>
+
+            <ul style="list-style-type: none; padding: 0%; display: flex; flex-direction: column; align-items: center;">
+                {% for lugar in matches %}
+                <div class="card card-home">
+                    <li>
+                        <h5 class="card-title">{{lugar.rua}}</h5>
+                    </li>
+                </div>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
+
 </section>
 
-<section>
-    <div class="purplecard">
-        <h3>O que eu devo fazer em uma situação de alagamento?</h3>
-        <p>
-            Não fique próximo a caminhões ou ônibus. Veículos de grande porte provocam marolas 
-            que podem alagar o seu carro e fazer com que perca o controle da direção;<br>
-            Aos primeiros sinais de alagamento procure áreas elevadas para estacionar e 
-            aguarde o nível da água baixar;
-        </p>
-    </div>
-
-    <div class="purplecard">
-        <h3>Alagou aí? conta pra gente!</h3>
-        <p>
-            Aonde você esta alagou? Conte para nós! Você estará ajudando milhões de pessoas
-            ao dizer o local onde ocorre o alagamento. Nos ajude a encontrar o melhor caminho.
-            Faça a sua parte!
-        </p>
-    </div>
-</section>
-
-<section>
-    <div class="purplecard">
-        <h3>Quais os problemas que causam alagamentos?</h3>
-        <p>
-            Um problema que parece não ter uma solução rápida é o elevado índice de poluição, causado 
-            tanto pela ausência de consciência por parte da população quanto por sistemas ineficientes 
-            de coleta de lixo ou de distribuição de lixeiras pela cidade. Ocorre o entupimento dos bueiros 
-            que seriam responsáveis por conter parte da água que eleva o nível dos rios. Além disso, o lixo 
-            gerado é levado pelas enxurradas e contribui ainda mais para elevar o volume das águas
-        </p>
-    </div>
-
-    <div class="purplecard">
-        <h3>Há solução para o alagamento?</h3>
-        <p>
-            A melhor forma de lidar com esse problema é realizar uma devida prevenção, através da 
-            construção de sistemas eficientes de drenagem, a desocupação de áreas de risco, criação de 
-            reservas florestais nas margens dos rios, diminuição dos índices de poluição e geração de 
-            lixo, além de um planejamento urbano mais consistente. E não podemos esquecer que cada um
-            faça a sua parte, para evitarmos futuros transtornos.
-        </p>
-    </div>
-</section>
 {% endblock %}
