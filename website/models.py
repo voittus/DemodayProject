@@ -15,7 +15,6 @@ class Cadastro(models.Model):
 class Alagou(models.Model):
     rua = models.CharField(max_length=300)
     bairro = models.CharField(max_length=200)
-    trafego = models.CharField(max_length=150)
     def __str__(self):
         return self.bairro
 

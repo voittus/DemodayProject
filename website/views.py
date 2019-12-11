@@ -50,7 +50,7 @@ def cadastro(request):
             # context = {
             #     'msg': "Cadastro efetuado com sucesso"
             # }
-        return render(request, 'cadastro.html')
+        return render(request, 'home.html')
     context = {
         'formulario': form
     }
@@ -76,7 +76,7 @@ def login_user(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('')
+                    return redirect('/home/')
                 else:
                     return HttpResponse('Disabled account')
         else:
@@ -87,12 +87,7 @@ def login_user(request):
         'formulario': form
     }
     return render(request, 'login.html', context)
-
-# def LoginRequest(request):
-
-#     if request.method == 'POST' and form.is_valid():
-#         user = form.authenticate_user()
-#         login(request, user)
-#         return HttpResponseRedirect(reverse('Hello'))
-
-#     return render(request, 'login.html',{'form': form})
+    
+def logout_view(request):
+    logout(request)
+    return redirect('/home/')
