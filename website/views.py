@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from website.forms import CadastroForm
 from website.forms import AlagouForm
 from website.forms import LoginForm
+from website.forms import PesquisaForm
 from website.models import *
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
@@ -15,9 +16,18 @@ def layout(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    form = PesquisaForm(request.POST)
+    if form.is_valid():
+        locals2 = Alagou.objects.values('rua').annotate(dCount=Count('rua'))
+        lugaresCertos = []
+        for local in locals2:
+            if local.get('dCount') >= 5:
+                lugaresCertos.append(local)            
+        matches = (lugar for lugar in lugaresCertos if form.cleaned_data['pesquisa'] in lugar.get('rua'))        
+        return render(request, 'home.html', {'formulario': form, 'matches': matches})
+    return render(request, 'home.html', {'formulario': form})    
 
-
+@login_required(login_url='/login/')
 def alagou(request):
     form = AlagouForm(request.POST or None)
     if form.is_valid():
@@ -49,12 +59,11 @@ def cadastro(request):
 
 def local(request):
     locals2 = Alagou.objects.values('rua').annotate(dCount=Count('rua'))
-    lugaresCerto = []
+    lugaresCertos = []
     for local in locals2:
         if local.get('dCount') >= 5:
-            lugaresCerto.append(local)
-    return render(request, 'locaisalagados.html', {'lugaresCerto': lugaresCerto})
-
+            lugaresCertos.append(local)
+    return render(request, 'locaisalagados.html', {'lugaresCertos': lugaresCertos})
 
 def login_user(request):
     # form = LoginForm(request.POST or None)
@@ -75,8 +84,8 @@ def login_user(request):
     else:
         form = LoginForm()
     context = {
-                'formulario': form
-            }
+        'formulario': form
+    }
     return render(request, 'login.html', context)
 
 # def LoginRequest(request):
