@@ -36,12 +36,10 @@ class AlagouForm(forms.ModelForm):
         fields = [
             'rua',
             'bairro',
-            'trafego',
         ]
         widgets = {
             'rua': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 140, 'placeholder': 'Endereço alagado'}),
             'bairro': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 140, 'placeholder': 'Bairro'}),
-            'trafego': forms.TextInput(attrs={'class': 'form-control', 'maxlength': 140, 'placeholder': 'transito'})
         }
 
 
