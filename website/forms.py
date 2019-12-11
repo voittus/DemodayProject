@@ -54,4 +54,4 @@ class LoginForm(forms.Form):
 
 class PesquisaForm(forms.Form):
     pesquisa = forms.CharField(widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'Pesquisar rua'}))
+        attrs={'class': 'form-control', 'placeholder': 'Digite a Rua'}))
