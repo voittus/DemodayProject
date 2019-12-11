@@ -25,6 +25,9 @@
         <a class="nav-link" href="/alagou/">Alagou</a>
         <a class="nav-link" href="/login/">Login/Cadastro</a>
         <a class="nav-link" href="/locaisalagados/">Pontos de Alagamento</a>
+        {% if user.is_authenticated %}
+        <a class="nav-link" href="">{{ user.get_username }}</a>
+        {% endif %}
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <img class="icone" src="../static/images/iconalagamaps.png" alt="">
         </a>
