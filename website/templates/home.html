@@ -5,19 +5,20 @@
 
 <section>
     <div class="purplecard">
-        <h3></h3>
+        <h3>BEM VINDO AO ALAGAMAPS</h3>
 
-        <p>AlagaMaps é um site que informa de acordo com usuários, os pontos de alagamento na cidade!
-            Calculamos com base na quantidade de informações de locais alagados e informamos pra você!
+        <p>Somos um site que informa de acordo com usuários, os pontos de alagamento na cidade!
+            Calculamos com base na quantidade de registros dos locais alagados e informamos pra você!
         </p>
     </div>
 
     <div class="purplecard" id="formulario" style="display: flex; flex-direction: column; justify-content: center;">
         <h3>Pesquise por sua rua ou avenida:</h3>
+        <p style="text-align: center;"> Se sua rua estiver alagada, ela será listada aqui.</p>
         <form method="POST" class="form-pesquisa">
             {% csrf_token %}
             {{formulario|crispy}}
-            <button>Pesquisar</button>
+            <button>Buscar</button>
         </form>
         <div>
 

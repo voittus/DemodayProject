@@ -1,7 +1,7 @@
 body
 {
-    background-color: rgb(130, 197, 228);
-    margin: 0;
+    background-image: url("../static/images/guardachuvas.jpg");
+    margin: 0%;
 }
 
 .topnav 
@@ -83,6 +83,7 @@ section
     box-shadow: 8px 8px 8px black; 
     padding: 5%;
     margin-left: 2%;
+    opacity: 0.9;
 }
 
 
@@ -111,6 +112,7 @@ h5{
 }
 #alagous{
     margin-bottom: 10%;
+    color: white;
 }
 .card {
     -webkit-box-shadow: 3px 3px 5px white;
