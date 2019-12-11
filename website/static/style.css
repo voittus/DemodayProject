@@ -1,6 +1,6 @@
 body
 {
-    background-image: url(./images/teste3.jpeg);
+    background-color: rgb(130, 197, 228);
     margin: 0;
 }
 
@@ -24,7 +24,8 @@ body
   
 .topnav a:hover 
 {
-    background-color: rgb(252, 247, 247);
+    background-color: black;
+    opacity: 0.5;
 }
   
 .topnav a.active 
@@ -44,8 +45,6 @@ section
     justify-content: space-around;
     flex-direction: row;
     padding: 0.5%;
-    margin-top: 10%;
-
 }
 .purplecard
 {
@@ -65,7 +64,12 @@ section
 {
     margin: 100px;
 }
-
+.card-home{
+    display: flex; 
+    justify-content: center; 
+    width: 18rem;
+    margin: 5px;
+}
 .row
 {
     display: flex;
@@ -97,10 +101,13 @@ h3
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+.form-pesquisa{
+    padding: 5%;
+}
 h5{
     color: black;
     text-align: center;
-
+    padding-right: 2%;
 }
 #alagous{
     margin-bottom: 10%;
@@ -178,6 +185,7 @@ button{
     border-radius: 30px;
     padding: 1% 10% 1% 11%;
 }
+
 .notUser
 {
     padding: 20px;
@@ -190,9 +198,9 @@ footer
     height: 40px;
     background-color: black;
     opacity: 0.5;
-    /* position:absolute;
+    position:absolute;
     bottom: 0;
-    left: 0; */
+    left: 0; 
     width:100%;
     background-color:rgb(0, 110, 201);
 }
